@@ -1,0 +1,59 @@
+/*css file for personal website*/
+
+body {
+    background-color: #f6eee3;
+}
+
+h1 {
+    position: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20;
+}
+
+p {
+    position: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12;
+}   
+
+.cursor {
+    background-color: rgb(15 23 42);
+    width: 2rem;
+    height: 6rem;
+    animation: blink 1s infinite;
+    
+}
+
+@keyframes blink {
+    0%, 100% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: rgb(15 23 42);
+    }
+}
+
+
+.row {
+    padding-top: 125px;
+}
+
+/* Create three equal columns that float next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other*/
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
