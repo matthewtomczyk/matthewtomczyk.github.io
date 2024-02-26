@@ -1,35 +1,64 @@
 /*css file for personal website*/
 
 body {
-    background-color: #f6eee3;
+    background-color: hsl(0, 0%, 11%);
 }
 
 h1 {
     position: center;
-    font-family: 'Courier New', Courier, monospace;
     font-size: 20;
+    color: antiquewhite;
+}
+
+.cm {
+    font-family: comp;
 }
 
 p {
     position: center;
     font-family: 'Courier New', Courier, monospace;
     font-size: 12;
+    color: antiquewhite;
 }   
 
 .cursor {
-    background-color: rgb(15 23 42);
-    width: 2rem;
-    height: 6rem;
-    animation: blink 1s infinite;
-    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center; /* Center items vertically within the flex container */
 }
+
+.cursor::before {
+    content: '>';
+    font-size: 10rem; /* Adjust the font size to make the ">" symbol bigger */
+    color: white; /* Set the color of the arrow */
+    margin-right: 0.5rem; /* Adjust spacing between arrow and rectangle */
+    font-weight: bold; /* Make the ">" symbol thicker */
+    vertical-align: middle; /* Align the ">" symbol vertically within its line box */
+    line-height: 1; /* Reset line-height to default */
+}
+
+.cursor::after {
+    content: '';
+    background-color: hsl(0, 0%, 11%);
+    width: 6rem;
+    height: 1rem;
+    animation: blink 1s infinite;
+    position: bottom;
+}
+
+
+
+
 
 @keyframes blink {
     0%, 100% {
         background-color: transparent;
     }
     50% {
-        background-color: rgb(15 23 42);
+        background-color: rgb(255, 255, 255);
     }
 }
 
@@ -38,22 +67,28 @@ p {
     padding-top: 125px;
 }
 
-/* Create three equal columns that float next to each other */
+/*/* Create three equal columns that float next to each other 
 .column {
     float: left;
     width: 33.33%;
 }
 
-/* Clear floats after the columns */
+/* Clear floats after the columns 
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
 
-/* Responsive layout - makes the three columns stack on top of each other*/
+/* Responsive layout - makes the three columns stack on top of each other
 @media screen and (max-width: 600px) {
     .column {
         width: 100%;
     }
 }
+*/
+
+@font-face {
+    font-family: "Computer Modern ";
+    src: url(ace.ttf);
+    }
